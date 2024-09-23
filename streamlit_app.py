@@ -1,4 +1,5 @@
 import streamlit as st
 
-st.title('Cricket Player Portal (Womens)')
+st.title('Cricketer Profile Dashboard (Women)')
+
 
