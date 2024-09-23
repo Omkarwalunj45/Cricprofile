@@ -1,5 +1,4 @@
 import streamlit as st
 
-st.title('🎈 App Name')
+st.title('Cricket Player Portal (Womens)')
 
-st.write('Hello world!')
