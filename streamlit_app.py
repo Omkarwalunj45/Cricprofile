@@ -24,7 +24,7 @@ if not filtered_players.empty:
     for _, player in filtered_players.iterrows():
         st.title(player['batsman'])
         # st.subheader(f"{player['Age']} years old")
-         st.text(player_info['batting_hand'])
+        st.text(player_info['batting_hand'])
         # st.text(f"Bowling style: {player['Bowling Style']}")
         # st.text(f"Playing role: {player['Playing Role']}")
         # st.subheader('Career Performance')
