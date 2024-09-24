@@ -6,7 +6,7 @@ import pandas as pd
 
 
 # Load the player data from the Excel sheet
-player_data = pd.read_csv('df = pd.read_csv("C:\Users\Walunj\Downloads\WT20I_Bat.csv")')
+player_data = pd.read_csv("C:\Users\Walunj\Downloads\WT20I_Bat.csv")
 player_info = pd.read_csv("C:\Users\Walunj\Downloads\squads.csv")
 
 # Create the Streamlit app
