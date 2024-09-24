@@ -6,7 +6,7 @@ import pandas as pd
 
 
 # Load the player data from the Excel sheet
-player_data = pd.read_excel('player_data.xlsx')
+player_data = pd.csv('WT20I_bat.csv')
 
 # Create the Streamlit app
 st.set_page_config(page_title='Player Profile')
