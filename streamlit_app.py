@@ -23,6 +23,6 @@ if not filtered_players.empty:
         # st.text(f"Bowling style: {player['Bowling Style']}")
         # st.text(f"Playing role: {player['Playing Role']}")
         # st.subheader('Career Performance')
-        st.dataframe(player_data[['runs', 'balls', 'SR']])
+        st.dataframe(player_data[['runs', 'ball', 'SR']])
 else:
     st.write('No player found.')
