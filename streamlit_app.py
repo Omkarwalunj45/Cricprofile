@@ -16,17 +16,17 @@ st.sidebar.title('Player Search')
 search_term = st.sidebar.text_input('Enter player name:')
 
 # Filter the player data based on the search term
-filtered_players = player_data[player_data['Name'].str.contains(search_term, case=False)]
+filtered_players = player_data[player_data['batsman'].str.contains(search_term, case=False)]
 
 # Display the player profile
 if not filtered_players.empty:
     for _, player in filtered_players.iterrows():
-        st.title(player['Name'])
-        st.subheader(f"{player['Age']} years old")
-        st.text(f"Batting style: {player['Batting Style']}")
-        st.text(f"Bowling style: {player['Bowling Style']}")
-        st.text(f"Playing role: {player['Playing Role']}")
-        st.subheader('Career Performance')
-        st.dataframe(player_data[['Runs', 'Balls', 'Strike Rate']])
+        st.title(player['batsman'])
+        # st.subheader(f"{player['Age']} years old")
+        # st.text(f"Batting style: {player['Batting Style']}")
+        # st.text(f"Bowling style: {player['Bowling Style']}")
+        # st.text(f"Playing role: {player['Playing Role']}")
+        # st.subheader('Career Performance')
+        st.dataframe(player_data[['runs', 'balls', 'SR']])
 else:
     st.write('No player found.')
