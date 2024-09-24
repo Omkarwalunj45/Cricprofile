@@ -1,16 +1,11 @@
 import streamlit as st
-
-st.title('Cricketer Profile Dashboard (Women)')
-st.header("ICC Women's T20WC 2024")
 import pandas as pd
-
-
-# Load the player data from the Excel sheet
-player_data = pd.read_csv("Dataset/WT20I_Bat.csv")
-player_info = pd.read_csv("Dataset/squads.csv")
 
 # Create the Streamlit app
 st.set_page_config(page_title='Player Profile')
+# Load the player data from the Excel sheet
+player_data = pd.read_csv("Dataset/WT20I_Bat.csv")
+player_info = pd.read_csv("Dataset/squads.csv")
 
 # Add a sidebar for the player search
 st.sidebar.title('Player Search')
