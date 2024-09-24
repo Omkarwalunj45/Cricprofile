@@ -7,6 +7,7 @@ import pandas as pd
 
 # Load the player data from the Excel sheet
 player_data = pd.read_csv('WT20I_bat.csv')
+player_info = pd.read_csv('squads.csv')
 
 # Create the Streamlit app
 st.set_page_config(page_title='Player Profile')
@@ -23,7 +24,7 @@ if not filtered_players.empty:
     for _, player in filtered_players.iterrows():
         st.title(player['batsman'])
         # st.subheader(f"{player['Age']} years old")
-        # st.text(f"Batting style: {player['Batting Style']}")
+         st.text(player_info['batting_hand'])
         # st.text(f"Bowling style: {player['Bowling Style']}")
         # st.text(f"Playing role: {player['Playing Role']}")
         # st.subheader('Career Performance')
