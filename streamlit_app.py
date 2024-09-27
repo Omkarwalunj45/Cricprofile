@@ -972,13 +972,7 @@ if sidebar_option == "Player Profile":
 
 # If "Matchup Analysis" is selected
 elif sidebar_option == "Matchup Analysis":
-    pdf['total_runs'] = pdf['runs_off_bat'] + pdf['extras']
-    pdf = pdf.rename(columns={'runs_off_bat': 'batsman_runs', 'wicket_type': 'dismissal_kind', 'striker': 'batsman', 'innings': 'inning'})
-    pdf = pdf.dropna(subset=['ball'])
-     # Convert the 'ball' column to numeric if it's not already (optional but recommended)
-    pdf['ball'] = pd.to_numeric(pdf['ball'], errors='coerce') 
-           # Applying the lambda function to calculate the 'over'
-    pdf['over'] = pdf['ball'].apply(lambda x: mt.floor(x) + 1 if pd.notnull(x) else None)
+   
             
     st.header("Matchup Analysis")
     # Filter unique batters and bowlers from the DataFrame
